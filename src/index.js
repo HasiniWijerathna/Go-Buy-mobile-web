@@ -1,6 +1,5 @@
 import App from './App';
 import './stylesheets/index.css';
-
 import { AppRegistry } from 'react-native';
 
 // register the app
@@ -14,3 +13,5 @@ AppRegistry.runApplication('App', {
   initialProps: {},
   rootTag: document.getElementById('root')
 });
+
+ 
