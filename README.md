@@ -1,1 +1,1 @@
-#Go Buy application 
+Go Buy application 
