@@ -8,14 +8,14 @@ import { Venues } from "../modules/Venues";
 /**
  * Conditionally render content based on the navigated page
  */
-const Router = observer(() => {
+ const Router = observer(() => {
     const routerStore = useContext(RouterStoreContext);
 
-    return routerStore.screen === "ShoppingList" ? (
+    return routerStore.screen === "Home" ? (
         <ShoppingList />
     ) : (
-            <Venues />
-        )
+        <Venues />
+    )
 });
 
-export default Router;
+export default Router
