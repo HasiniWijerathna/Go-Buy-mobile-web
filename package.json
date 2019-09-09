@@ -18,17 +18,18 @@
     "coverage:native": "node scripts/test.js --config \"./config/native.jest.config.js\" --coverage"
   },
   "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.4.4",
     "mobx": "^5.9.0",
     "mobx-react": "^6.1.3",
     "mobx-react-lite": "1.0.1",
+    "natural": "^0.6.3",
     "react": "^16.6.x",
     "react-app-polyfill": "^0.1.3",
     "react-art": "^16.6.x",
     "react-dom": "^16.6.x",
     "react-native": "0.55.x",
     "react-native-web": "^0.10.x",
-    "react-web-notification": "^0.6.1",
-    "@babel/plugin-proposal-decorators": "^7.4.4"
+    "react-web-notification": "^0.6.1"
   },
   "devDependencies": {
     "@babel/core": "7.1.0",
