@@ -13,8 +13,4 @@ const trainNeuralNetClassifier = () => {
   classifier.train();
 };
 
-const classifyShoppingItem = shoppingItem => {
-  classifier.classify(shoppingItem);
-  console.log(classifier.classify(shoppingItem));
-};
-export { trainNeuralNetClassifier, classifyShoppingItem };
+export { trainNeuralNetClassifier };
