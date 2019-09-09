@@ -2,12 +2,18 @@ import React, { Component } from "react";
 import { Platform, Animated } from "react-native";
 import Router from "./config/Router";
 import PushNotification from "./services/PushNotification";
-import BayesClassifier from "./recurrentNeuralNetwork/classifier/BayesClassifier";
+import { trainNeuralNetClassifier } from "./recurrentNeuralNetwork/classifier/BayesClassifier";
+// import { trainNeuralNetClassifier } from './recurrentNeuralNetwork/trainer/ClassifierTrainer';
 
-class App extends Component {
+
+class App extends React.Component {
+  constructor() {
+    super()
+   console.log(trainNeuralNetClassifier('Deposit money'))
+  }
 
   render() {
-    return <BayesClassifier />;
+    return <Router />;
   }
 }
 
