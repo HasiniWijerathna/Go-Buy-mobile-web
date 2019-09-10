@@ -1,7 +1,7 @@
 import { observable } from "mobx";
 import { CreateContext } from "react";
 
-class UserStore {
+class ShopperStore {
   @observable geoLocation = { latitude: "", longitude: "" };
   @observable shoppingList = [];
   @observable isLoading = true;
@@ -20,4 +20,4 @@ class UserStore {
   };
 }
 
-export const ShoppingStoreContext = CreateContext(new UserStore());
+export const ShopperStoreContext = CreateContext(new ShopperStore());
