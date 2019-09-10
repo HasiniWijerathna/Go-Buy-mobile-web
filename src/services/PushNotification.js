@@ -4,6 +4,9 @@ import Notification from "../lib/Notification";
 //allow react dev tools work
 window.React = React;
 
+/**
+ * Defines the pushnotification related functionalities
+ */
 class PushNotification extends React.Component {
   constructor(props) {
     super(props);
@@ -13,18 +16,29 @@ class PushNotification extends React.Component {
     };
   }
 
+  /**
+   * Chanage the state if the permission is granted
+   */
   handlePermissionGranted() {
     console.log("Permission Granted");
     this.setState({
       ignore: false
     });
   }
+
+  /**
+   * Chanage the state if the permission is denied
+   */
   handlePermissionDenied() {
     console.log("Permission Denied");
     this.setState({
       ignore: true
     });
   }
+
+  /**
+   * Checks if the web notification is supported
+   */
   handleNotSupported() {
     console.log("Web Notification not Supported");
     this.setState({
@@ -32,42 +46,70 @@ class PushNotification extends React.Component {
     });
   }
 
+  /**
+   * Handle the on click for notification
+   * @param {Event} e 
+   * @param {string} tag 
+   */
   handleNotificationOnClick(e, tag) {
     console.log(e, "Notification clicked tag:" + tag);
   }
 
+  /**
+   * Handle error for notification
+   * @param {Event} e 
+   * @param {string} tag 
+   */
   handleNotificationOnError(e, tag) {
     console.log(e, "Notification error tag:" + tag);
   }
 
+  /**
+   * Handle notification close
+   * @param {Event} e 
+   * @param {string} tag 
+   */
   handleNotificationOnClose(e, tag) {
     console.log(e, "Notification closed tag:" + tag);
   }
 
+  /**
+   * Handle notification show
+   * @param {Event} e 
+   * @param {string} tag 
+   */
   handleNotificationOnShow(e, tag) {
     this.playSound();
     console.log(e, "Notification shown tag:" + tag);
   }
 
+  /**
+   * Handle the sound for the notification 
+   * @param {string} filename 
+   */
   playSound(filename) {
     document.getElementById("sound").play();
   }
 
+  /**
+   * Triggers to popup the pushnotification
+   */
   handleButtonClick() {
     if (this.state.ignore) {
       return;
     }
 
+    // Configuring the body of the notification
     const now = Date.now();
-
     const title = "Go Buy your item";
     const body = "from X convenintent store";
     const tag = now;
     // const icon = 'http://mobilusoss.github.io/react-web-notification/example/Notifications_button_24.png';
     // const icon = 'http://localhost:3000/Notifications_button_24.png';
-
     // Available options
     // See https://developer.mozilla.org/en-US/docs/Web/API/Notification/Notification
+
+    // Consist the attributes to option object
     const options = {
       tag: tag,
       body: body,
@@ -76,12 +118,18 @@ class PushNotification extends React.Component {
       dir: "ltr",
       sound: "./sound.mp3" // no browsers supported https://developer.mozilla.org/en/docs/Web/API/notification/sound#Browser_compatibility
     };
+
+    // Change the state with the configured attributes
     this.setState({
       title: title,
       options: options
     });
   }
 
+  /**
+  * Describes the elements on the push notification
+  * @return {String} HTML elements
+  */
   render() {
     return (
       <div>
