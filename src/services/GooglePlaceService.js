@@ -1,4 +1,3 @@
-import React, { useContext } from "react";
 import GOOGLE_API_KEY from "../config/AppConst";
 import Geolocation from "@react-native-community/geolocation";
 

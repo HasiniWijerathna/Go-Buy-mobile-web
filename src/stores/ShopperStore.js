@@ -1,5 +1,6 @@
 import { observable } from "mobx";
 import * as React from "react";
+
 /**
  * Defined the mobx store with shopper attributes
  * At this stage this store consist of both user and shopping items data
