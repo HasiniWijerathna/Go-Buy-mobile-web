@@ -1,6 +1,10 @@
 import { observable } from "mobx";
 import { CreateContext } from "react";
 
+/**
+ * Defined the mobx store with shopper attributes
+ * At this stage this store consist of both user and shopping items data
+ */
 class ShopperStore {
   @observable geoLocation = { latitude: "", longitude: "" };
   @observable shoppingList = [];
