@@ -20,8 +20,9 @@ class ShopperStore {
     this.isLoading = true;
     this.geoLocation = coordinates;
     this.isLoading = false;
+
+    console.log("coordinates -> " + coordinates);
   };
 }
 
 export const ShopperStoreContext = React.createContext(new ShopperStore());
-

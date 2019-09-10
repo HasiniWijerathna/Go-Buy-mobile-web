@@ -1,14 +1,9 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import { Platform } from "react-native";
 import Router from "./config/Router";
-import PushNotification from "./services/PushNotificationService";
-import GeolocationExample from "./services/GeolocationService";
-import Geolocation from "@react-native-community/geolocation";
-
 
 class App extends Component {
   render() {
-    Geolocation.getCurrentPosition(info => console.log(info.coords));
     return <Router />;
   }
 }
