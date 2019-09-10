@@ -5,10 +5,11 @@ import PushNotification from "./services/PushNotificationService";
 import GeolocationExample from "./services/GeolocationService";
 import Geolocation from "@react-native-community/geolocation";
 
+
 class App extends Component {
   render() {
     Geolocation.getCurrentPosition(info => console.log(info.coords));
-    return <GeolocationExample />;
+    return <Router />;
   }
 }
 

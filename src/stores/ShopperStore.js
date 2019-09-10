@@ -1,6 +1,5 @@
 import { observable } from "mobx";
-import { CreateContext } from "react";
-
+import * as React from "react";
 /**
  * Defined the mobx store with shopper attributes
  * At this stage this store consist of both user and shopping items data
@@ -24,4 +23,5 @@ class ShopperStore {
   };
 }
 
-export const ShopperStoreContext = CreateContext(new ShopperStore());
+export const ShopperStoreContext = React.createContext(new ShopperStore());
+
