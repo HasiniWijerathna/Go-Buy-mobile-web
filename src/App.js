@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Platform, Animated } from "react-native";
 import Router from "./config/Router";
-import PushNotification from "./services/PushNotification";
+import PushNotification from "./services/PushNotificationService";
 
 class App extends Component {
 
