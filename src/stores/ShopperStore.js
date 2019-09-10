@@ -9,6 +9,10 @@ class ShopperStore {
   @observable shoppingList = [];
   @observable isLoading = true;
 
+  /**
+   * Addes shopping items to the shopping store
+   * @param {string} shoppingItem
+   */
   addItemstoShoppingStore = shoppingItem => {
     this.isLoading = true;
     this.shoppingList.push(shoppingItem);
@@ -16,12 +20,14 @@ class ShopperStore {
     return shoppingItem;
   };
 
+  /**
+   * Adds user geo location to the store
+   * @param {object} coordinates
+   */
   addGeoLocationStore = coordinates => {
     this.isLoading = true;
     this.geoLocation = coordinates;
-    this.isLoading = false;
-
-    console.log("coordinates -> " + coordinates);
+    this.isLoading = false; 
   };
 }
 
