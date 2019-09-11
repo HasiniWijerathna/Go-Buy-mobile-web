@@ -1,14 +1,8 @@
-import React from "react";
+import React, { Component, useContext } from "react";
 import { Platform } from "react-native";
 import Router from "./config/Router";
 
-/**
- * Defines the top most component in hierarchy
- * Returns the react router for navigation
- */
- 
-class App extends React.Component {
-
+class App extends Component {
   render() {
     return <Router />;
   }
