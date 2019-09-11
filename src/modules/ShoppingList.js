@@ -2,18 +2,24 @@ import * as React from "react";
 import { Text, View, Button, StyleSheet } from "react-native";
 import { observer } from "mobx-react-lite";
 import { RouterStoreContext } from "../stores/RoutesStore";
+import ShoppingCard from "../viewElements/ShoppingCard";
 
+/**
+ * The hook defines the shopping list
+ */
 export const ShoppingList = observer(() => {
   const routerStore = React.useContext(RouterStoreContext);
   return (
-    <View style={styles.container}>
-      <Text>Shopping list</Text>
-      <Button
-        style={styles.logo}
-        title="Go to"
-        onPress={() => (routerStore.screen = "Venues")}
-      />
-    </View>
+    // <View style={styles.container}>
+    //   <Text>Shopping list</Text>
+    //   <Button
+    //     style={styles.logo}
+    //     title="Go to"
+    //     onPress={() => (routerStore.screen = "Venues")}
+    //   />
+
+    // </View>
+    <ShoppingCard />
   );
 });
 
