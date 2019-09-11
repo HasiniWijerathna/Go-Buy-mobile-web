@@ -19,7 +19,7 @@ const leftButton = (
 );
 
 /**
- * The hook defines the shopping list item
+ * Defines the shopping list item
  */
 const ShoppingCard = () => {
   return (

@@ -5,7 +5,7 @@ import { RouterStoreContext } from "../stores/RoutesStore";
 import ShoppingCard from "../viewElements/ShoppingCard";
 
 /**
- * The hook defines the shopping list
+ * Defines the shopping list
  */
 export const ShoppingList = observer(() => {
   const routerStore = React.useContext(RouterStoreContext);
