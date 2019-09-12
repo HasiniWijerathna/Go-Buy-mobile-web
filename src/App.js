@@ -1,6 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Platform } from "react-native";
 import Router from "./config/Router";
+import Header from "./viewElements/Header"
 
 /**
  * Defines the top most component in hierarchy
@@ -13,7 +14,8 @@ class App extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.wrapper}>
-          <Router />
+          <Header />
+          {/* <Router /> */}
         </View>
       </View>
     );
@@ -32,7 +34,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#F5FCFF",
     width: "100%",
-    maxWidth: 425
+    maxWidth: 425,
+    // backgroundColor: "green"
   }
 });
 
