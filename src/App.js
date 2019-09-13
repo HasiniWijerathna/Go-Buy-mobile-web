@@ -1,7 +1,17 @@
 import React from "react";
-import { View, StyleSheet, Platform } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Platform,
+  Dimensions,
+  Button,
+  TouchableHighlight,
+  Text
+} from "react-native";
 import Router from "./config/Router";
-import Header from "./viewElements/Header"
+import Header from "./viewElements/Header";
+import AddShoppingItem from "../src/viewElements/AddShoppingItem";
+import MediaQuery from 'react-responsive'
 
 /**
  * Defines the top most component in hierarchy
@@ -9,19 +19,31 @@ import Header from "./viewElements/Header"
  */
 
 class App extends React.Component {
-
   render() {
+    const windowW = Dimensions.get("window").width;
+    const windowH = Dimensions.get("window").height;
+
+    console.log("windowH -> " + windowH);
+
     return (
-      <View style={styles.container}>
+      <View>
+        <View style={styles.container}>
         <View style={styles.wrapper}>
           <Header />
+
           <Router />
+       
         </View>
       </View>
+           <AddShoppingItem />
+      </View>
+      
     );
   }
 }
 
+const windowW = Dimensions.get("window").width;
+const windowH = Dimensions.get("window").height;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -36,7 +58,7 @@ const styles = StyleSheet.create({
     width: "100%",
     maxWidth: 425,
     // backgroundColor: "green"
-  }
+  },
 });
 
 // Defines the hot reloading

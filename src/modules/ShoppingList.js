@@ -1,25 +1,16 @@
 import * as React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { observer } from "mobx-react-lite";
-// import { RouterStoreContext } from "../stores/RoutesStore";
 import ShoppingCard from "../viewElements/ShoppingCard";
 
 /**
  * Defines the shopping list
  */
 export const ShoppingList = observer(() => {
-  // const routerStore = React.useContext(RouterStoreContext);
   return (
-    // <View style={styles.container}>
-    //   <Text>Shopping list</Text>
-    //   <Button
-    //     style={styles.logo}
-    //     title="Go to"
-    //     onPress={() => (routerStore.screen = "Venues")}
-    //   />
-
-    // </View>
-    <ShoppingCard />
+    <View>
+      <ShoppingCard />
+    </View>
   );
 });
 
@@ -49,5 +40,10 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontWeight: "bold",
     fontSize: 16
+  },
+  actionButtonIcon: {
+    fontSize: 20,
+    height: 22,
+    color: "white"
   }
 });
