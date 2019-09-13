@@ -37,8 +37,8 @@ const ShoppingCard = () => {
 // Defines the styles of the swipe item
 const styles = StyleSheet.create({
   button: {
-    width: "95%",
-    height: 60,
+    width: "99%",
+    height: 50,
     alignSelf: "center",
     marginVertical: 5
   },
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#ffffff",
-    borderRadius: 10,
+    borderRadius: 5,
     borderColor: "#e3e3e3",
     borderWidth: 1
   }
