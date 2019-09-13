@@ -15,9 +15,13 @@ const viewport = Dimensions.get("window");
 const Header = () => {
     let animationCheckedDone;
   return (
-    <div class="header-containter">
-    <h1 data-shadow='12th!!'>12th!</h1>
-    </div>
+    <div class="main">
+	<div>
+		<div class = "container"> 
+			<h1 class="knockout">Some Beach Somewhere</h1>
+		</div>
+	</div>
+</div>
   );
 };
 
