@@ -1,8 +1,14 @@
-@import url(https://fonts.googleapis.com/css?family=Pacifico);
-.container {
+/* @import url(https://fonts.googleapis.com/css?family=Pacifico);  */
+/* @import url('https://fonts.googleapis.com/css?family=Dosis|McLaren&display=swap'); */
+
+/* @import url('https://fonts.googleapis.com/css?family=Amaranth&display=swap'); */
+
+@import url("https://fonts.googleapis.com/css?family=Amaranth|Encode+Sans+Condensed&display=swap");
+
+/* .container {
   background-color: #ff6f69;
   background: radial-gradient(#ff6f69, #ff8b87);
-}
+} */
 
 .border {
   padding: 5px;
@@ -29,7 +35,7 @@
 .knockout {
   vertical-align: middle;
   text-align: center;
-  font-family: "Pacifico", cursive;
+  font-family: "Amaranth";
   font-size: 23pt;
   color: blue;
   color: #fff;
@@ -40,9 +46,9 @@
   -webkit-background-clip: text;
 }
 .knockout {
-  animation: Gradient 5s ease infinite;
-  -webkit-animation: Gradient 15s ease infinite;
-  -moz-animation: Gradient 5s ease infinite;
+  animation: Gradient 15s ease infinite;
+  -webkit-animation: Gradient 25s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
 }
 
 @-webkit-keyframes Gradient {

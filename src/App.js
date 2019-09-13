@@ -15,7 +15,7 @@ class App extends React.Component {
       <View style={styles.container}>
         <View style={styles.wrapper}>
           <Header />
-          {/* <Router /> */}
+          <Router />
         </View>
       </View>
     );
@@ -28,11 +28,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     height: "100%",
-    backgroundColor: "blue"
+    backgroundColor: "#fcccc0"
   },
   wrapper: {
     flex: 1,
-    backgroundColor: "#F5FCFF",
+    backgroundColor: "#fcccc0",
     width: "100%",
     maxWidth: 425,
     // backgroundColor: "green"
