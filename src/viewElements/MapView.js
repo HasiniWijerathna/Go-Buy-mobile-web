@@ -1,18 +1,15 @@
 import * as React from "react";
 import { Text, StyleSheet, View, Dimensions } from "react-native";
- import MapView from "./MapView";
 /**
  * Defines the text box for adding items
  */
 
-const AddShoppingItem = () => {
-  const data = {name: 'x'}
+const MapView = ({props}) => {
+    console.log('props => '+ props.name);
+
   return (
     <View>
-      <Text>AddShoppingItem</Text>
-      <MapView
-         props={data}
-      />
+        <Text>MAP VIEW</Text>
       </View>
   );
 };
@@ -45,4 +42,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default AddShoppingItem;
+export default MapView;

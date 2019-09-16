@@ -1,18 +1,17 @@
 import * as React from "react";
 import { Text, StyleSheet, View, Dimensions } from "react-native";
- import MapView from "./MapView";
 /**
  * Defines the text box for adding items
  */
 
-const AddShoppingItem = () => {
-  const data = {name: 'x'}
+const FloatingButton = () => {
+  console.log(Dimensions.get('window').height)
+  const windowW= Dimensions.get('window').width
+const windowH = Dimensions.get('window').height
+
   return (
-    <View>
-      <Text>AddShoppingItem</Text>
-      <MapView
-         props={data}
-      />
+    <View style={{borderWidth:1,position:'fixed',bottom:0,alignSelf:'flex-end'}}>
+        <Text>adadsadad</Text>
       </View>
   );
 };
@@ -45,4 +44,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default AddShoppingItem;
+export default FloatingButton;
