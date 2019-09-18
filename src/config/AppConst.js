@@ -1,0 +1,1 @@
+export var GOOGLE_API_KEY = "123";

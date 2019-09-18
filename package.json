@@ -19,6 +19,8 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@ticmakers-react-native/flexbox": "^1.0.0",
+    "lottie-react-native": "^3.1.0",
     "mobx": "^5.9.0",
     "mobx-react": "^6.1.3",
     "mobx-react-lite": "1.0.1",
@@ -28,8 +30,11 @@
     "react-art": "^16.6.x",
     "react-dom": "^16.6.x",
     "react-native": "0.55.x",
+    "react-native-action-button": "^2.8.5",
     "react-native-swipe-item": "^0.3.0",
     "react-native-web": "^0.10.x",
+    "react-native-web-maps": "^0.2.0",
+    "react-responsive": "^8.0.1",
     "react-web-notification": "^0.6.1"
   },
   "devDependencies": {

@@ -10,7 +10,8 @@ import {
 } from "react-native";
 import Router from "./config/Router";
 import Header from "./viewElements/Header";
-import AddShoppingItem from "../src/viewElements/AddShoppingItem";
+import FloatingButton from "./viewElements/FloatingButton";
+import AddShoppingItem from "./viewElements/AddShoppingItem";
 import MediaQuery from 'react-responsive'
 
 /**
@@ -35,8 +36,11 @@ class App extends React.Component {
        
         </View>
       </View>
-           <AddShoppingItem />
+      <AddShoppingItem />
       </View>
+
+      // <AddShoppingItem />
+
       
     );
   }

@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Text, StyleSheet, View, Dimensions } from "react-native";
- import MapView from "./MapView";
+import { Text, StyleSheet, View } from "react-native";
+ import GoogleMaps from "./GoogleMaps";
 /**
  * Defines the text box for adding items
  */
@@ -10,15 +10,13 @@ const AddShoppingItem = () => {
   return (
     <View>
       <Text>AddShoppingItem</Text>
-      <MapView
+      <GoogleMaps
          props={data}
       />
       </View>
   );
 };
 
-const windowW= Dimensions.get('window').width
-const windowH = Dimensions.get('window').height
 
 // Defines the styles of the swipe item
 const styles = StyleSheet.create({
@@ -26,7 +24,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    paddingTop: windowH
   },
 
   bottomView: {
