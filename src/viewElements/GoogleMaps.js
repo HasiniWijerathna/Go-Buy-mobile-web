@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Text, StyleSheet, View } from "react-native";
+import {  StyleSheet, View } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 /**
  * Defines the text box for adding items
@@ -9,9 +9,8 @@ const GoogleMaps = ({ props }) => {
   return (
     <View
       style={{
-        width: "95%",
+        width: "100%",
         paddingLeft: "5%",
-        marginTop: 80,
         height: 800
       }}
     >

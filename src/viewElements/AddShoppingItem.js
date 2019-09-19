@@ -1,44 +1,36 @@
 import * as React from "react";
-import { Text, StyleSheet, View } from "react-native";
- import GoogleMaps from "./GoogleMaps";
+import { TextInput, StyleSheet, View } from "react-native";
+import GoogleMaps from "./GoogleMaps";
+
 /**
  * Defines the text box for adding items
  */
 
 const AddShoppingItem = () => {
-  const data = {name: 'x'}
+  const data = { name: "x" };
   return (
     <View>
-      <Text>AddShoppingItem</Text>
-      <GoogleMaps
-         props={data}
-      />
+      <View style={styles.swipeContentContainerStyle}>
+        <TextInput style={styles.button} defaultValue="Shopping item" />
       </View>
+      <GoogleMaps props={data} />
+    </View>
   );
 };
 
-
-// Defines the styles of the swipe item
 const styles = StyleSheet.create({
-  MainContainer: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-
-  bottomView: {
-    width: "100%",
+  button: {
     height: 50,
-    backgroundColor: "#FF9800",
+    width: "99%",
+    backgroundColor: "#ffffff",
+    paddingLeft: 15,
+    paddingRight: 15,
+    borderRadius: 6
+  },
+  swipeContentContainerStyle: {
     justifyContent: "center",
     alignItems: "center",
-    position: "absolute",
-    bottom: 0
-  },
-
-  textStyle: {
-    color: "#fff",
-    fontSize: 22
+    backgroundColor: "red"
   }
 });
 
