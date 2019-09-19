@@ -4,25 +4,32 @@ import MapView, { Marker } from "react-native-maps";
 /**
  * Defines the text box for adding items
  */
-
 const GoogleMaps = ({ props }) => {
   console.log("props => " + props.name);
   return (
-    <View>
+    <View
+      style={{
+        width: "95%",
+        paddingLeft: "5%",
+        marginTop: 80,
+        height: 800
+      }}
+    >
       <MapView
-        style={{
-          width: "95%",
-          paddingLeft: "5%",
-          marginTop: 80,
-          height: 800
-        }}
+        style={styles.map}
         initialRegion={{
           latitude: 37.78825,
           longitude: -122.4324,
-          latitudeDelta: 0.0922,
-          longitudeDelta: 0.0421
+          latitudeDelta: 0.0,
+          longitudeDelta: 0.0
         }}
-      />
+      >
+        <MapView.Marker
+          coordinate={{ latitude: 37.78825, longitude: -122.4324 }}
+          title={"title"}
+          description={"description"}
+        />
+      </MapView>
     </View>
   );
 };
